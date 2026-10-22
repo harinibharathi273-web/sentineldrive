@@ -1,0 +1,4 @@
+# Optional. Only needed to run a .pt checkpoint directly or to convert one to
+# ONNX with scripts/get_model.py. The ONNX model runs on OpenCV alone.
+ultralytics>=8.2
+onnx>=1.15

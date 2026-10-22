@@ -1,0 +1,9 @@
+node_modules/
+frontend/dist/
+backend/.venv/
+backend/data/
+backend/models/*.pt
+backend/models/*.onnx
+__pycache__/
+*.pyc
+.env

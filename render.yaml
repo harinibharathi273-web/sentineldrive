@@ -1,0 +1,12 @@
+# Render Blueprint: New > Blueprint > pick this repo.
+services:
+  - type: web
+    name: sentineldrive
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: SENTINEL_API_KEY
+        generateValue: true
+      - key: SENTINEL_GEOCODER
+        value: nominatim
