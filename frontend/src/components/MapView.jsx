@@ -17,10 +17,9 @@ export default function MapView({ sites = [], crashes = [], selectedId, onSelect
 
   useEffect(() => {
     const m = L.map(el.current, { zoomControl: true, attributionControl: true }).setView(INDIA, 5)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      maxZoom: 20,
-      subdomains: 'abcd',
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(m)
     layer.current = L.layerGroup().addTo(m)
     m.on('click', (e) => {
